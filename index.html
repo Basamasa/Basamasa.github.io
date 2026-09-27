@@ -1,320 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>HeartRateHub - Precise heart rate zone training</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101a16">
+  <title>RunDebrief — Your run, understood.</title>
+  <meta name="description" content="Review running intervals against your own heart-rate targets. Keep recording with Apple Workout. Meet RunDebrief, the next chapter of HeartRateHub for iPhone, iPad and Apple Watch.">
+  <link rel="canonical" href="https://basamasa.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RunDebrief — Your run, understood.">
+  <meta property="og:description" content="You did the intervals. See how your heart rate matched the plan. Preview the next chapter of HeartRateHub.">
+  <meta property="og:url" content="https://basamasa.github.io/">
+  <meta property="og:image" content="https://basamasa.github.io/assets/icon.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
 </head>
-
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0">HeartRateHub</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#feature" class="nav-item nav-link">Feature</a>
-                        <!-- <a href="#pricing" class="nav-item nav-link">Pricing</a>
-                        <a href="#review" class="nav-item nav-link">Review</a> -->
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <img src="img/1024.png" alt="Try our Beta App" class="ms-3 d-none d-lg-block" style="height: 40px; width: 40px; border-radius: 50%;">
-
-                </div>
-            </nav>
-
-            <div class="container-xxl bg-primary hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5">
-                        <div class="col-lg-8 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated slideInDown">Master Your Running with Heart Rate Zone Training</h1>
-                            <p class="text-white pb-3 animated slideInDown">Transform your running performance with HeartRateHub - the ultimate heart rate zone training companion for iOS and Apple Watch. Create custom training zones, follow pre-designed patterns, and get real-time feedback to optimize every run.</p>
-                            <!-- <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a> -->
-                            <!-- <a href="" class="app-store-button d-flex align-items-center bg-primary-gradient rounded-pill py-2 px-3 animated slideInLeft">
-                                <i class="fab fa-apple fa-lg text-white"></i>
-                                <p class="text-white mb-0 ms-2">App Store</p>
-                            </a> -->
-
-                            <a href="https://apps.apple.com/de/app/heartratehub/id6477622582?l=en-GB" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight contact-us-button">
-                                <i class="fab fa-apple fa-lg text-white"></i> Download
-                            </a>
-                            
-                            <!-- <a href="" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">Contact Us</a> -->
-                        </div>
-                        <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="owl-carousel screenshot-carousel">
-                                <img class="img-fluid" src="img/screenshot-1.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-2.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-3.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-4.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-5.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Navbar & Hero End -->
-
-       <!-- About Start -->
-        <div class="container-xxl py-5" id="about">
-            <div class="container py-5 px-lg-5">
-                <!-- Zone Setup Section -->
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">iOS App</h5>
-                        <h1 class="mb-4">Personalized Heart Rate Zones</h1>
-                        <p class="mb-4">Take control of your training with HeartRateHub's customizable heart rate zones. Whether you're a beginner or an experienced runner, easily create personalized zones that match your fitness level and goals. Set up your ideal training zones for different workout types - from endurance-building long runs to high-intensity interval sessions.</p>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="position-relative wow fadeInUp d-flex justify-content-center" data-wow-delay="0.5s">
-                            <video class="rounded" style="width: 280px; height: auto;" autoplay loop muted playsinline>
-                                <source src="zone-setup.mov" type="video/quicktime">
-                                <source src="zone-setup.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-white opacity-25 d-none"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pattern Store Section -->
-                <div class="row g-5 align-items-center flex-row-reverse mt-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">Training Patterns</h5>
-                        <h1 class="mb-4">Expert-Designed Workout Library</h1>
-                        <p class="mb-4">Access our extensive collection of pre-designed training patterns, crafted by running experts. Choose from a variety of workouts tailored for different goals - from 5K preparation to marathon training. Each pattern can be customized and saved to your personal library, ready to sync with your Apple Watch whenever you need it.</p>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="d-flex justify-content-center wow fadeInUp" data-wow-delay="0.5s">
-                            <img class="rounded" style="width: 280px; height: auto;" src="pattern-store.jpg">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Performance Analytics Section -->
-                <div class="row g-5 align-items-center mt-5">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">Post-Run Insights</h5>
-                        <h1 class="mb-4">Detailed Performance Analysis</h1>
-                        <p class="mb-4">Get comprehensive insights after every run. Analyze your zone adherence, track time spent in each intensity level, and visualize your performance trends. Our detailed analytics help you understand your training effectiveness and make data-driven adjustments to your workout routine. Watch your progress unfold with clear, actionable insights.</p>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="d-flex justify-content-center wow fadeInUp" data-wow-delay="0.5s">
-                            <img class="rounded" style="width: 280px; height: auto;" src="run-analysis.jpg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-        <!-- About Start -->
-        <div class="container-xxl py-5" id="about">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">Watch App</h5>
-                        <h1 class="mb-4">Monitor Your Heart Rate Like a Speedometer with HeartRateHub</h1>
-                        <p class="mb-4">Customize your zones on the iPhone and sync them with your Apple Watch for accessible training plans. The watch app features a speedometer-like display for heart rate, dynamically changing to match your preset patterns. It guides you through each phase of your workout, from intense sprints to cool-downs, with a clear visual of your current zone. Ideal for runners aiming to refine their training, HeartRateHub combines precision zone training with an intuitive, car-speedometer-inspired interface, elevating your running experience.</p>
-                    </div>
-                    <div class="col-lg-5">
-                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- Features Start -->
-        <div class="container-xxl py-5" id="feature">
-            <div class="container py-5 px-lg-5">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="text-primary-gradient fw-medium">HeartRateHub Features</h5>
-                    <h1 class="mb-5">Elevate Your Training with Precision</h1>
-                </div>
-                <div class="row g-4">
-                    <!-- Customizable Heart Rate Zones -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-heartbeat text-white fs-4"></i>
-                            </div>
-                            <h5 class="mb-3">Customizable Heart Rate Zones</h5>
-                            <p class="m-0">Set personalized heart rate zones directly on your iPhone to align your workouts perfectly with your fitness goals, ensuring every session is optimized for your desired outcomes.</p>
-                        </div>
-                    </div>
-                    <!-- Flexible Workout Patterns -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-tasks text-white fs-4"></i>
-                            </div>
-                            <h5 class="mb-3">Flexible Workout Patterns</h5>
-                            <p class="m-0">Design intricate workout patterns with varied heart rate zones, from warm-ups to high-intensity intervals, giving you complete control over your training regimen.</p>
-                        </div>
-                    </div>
-                    <!-- Apple Watch Integration -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-apple text-white fs-4"></i>
-                            </div>
-                            <h5 class="mb-3">Apple Watch Integration</h5>
-                            <p class="m-0">Seamlessly sync your workout patterns with your Apple Watch for real-time feedback, keeping you focused and on track with your training objectives.</p>
-                        </div>
-                    </div>
-                    <!-- Intuitive Visual Feedback -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-eye text-white fs-4"></i>
-                            </div>
-                            <h5 class="mb-3">Intuitive Visual Feedback</h5>
-                            <p class="m-0">Experience motivating visual feedback with a speedometer-style display on your Apple Watch, showing how your current heart rate compares to your targets.</p>
-                        </div>
-                    </div>
-                    <!-- Precision Training -->
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-bullseye text-white fs-4"></i>
-                            </div>
-                            <h5 class="mb-3">Precision Training</h5>
-                            <p class="m-0">Improve cardiovascular health and boost endurance by adhering to your heart rate zones, making your fitness goals more achievable with precision training.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="feature-item bg-light rounded p-4">
-                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
-                                <i class="fa fa-chart-line text-white fs-4"></i>
-                            </div>
-                            <h5 class="mb-3">Comprehensive Analytics and Insights</h5>
-                            <p class="m-0">Dive deep into your performance with detailed analytics and insights. Track your progress over time, understand your training patterns, and adjust your workouts for optimal results.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Contact Start -->
-        <div class="container-xxl py-5" id="contact">
-            <div class="container py-5 px-lg-5">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="text-primary-gradient fw-medium">Give Us Feedback</h5>
-                    <h1 class="mb-5">Get In Touch!</h1>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-9">
-                        <div class="wow fadeInUp" data-wow-delay="0.3s">
-                            <p class="text-center mb-4">Your feedback and suggestions are invaluable to us! Whether it's a feature request, a word of advice, or any feedback, we're eager to hear from you. <a href="mailto:anzerarkin@outlook.com?subject=Feedback%20and%20Suggestions">Send us an email</a>, and we'll work diligently to enhance your experience.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-        
-
-        <!-- Footer Start -->
-        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <h4 class="text-white mb-4">Contact</h4>
-                        <a href="mailto:anzerarkin@outlook.com?subject=Feedback%20and%20Suggestions"><i class="fa fa-envelope me-3"></i>anzerarkin@outlook.com</a>
-                        <div class="d-flex pt-2">
-                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
-                            <a class="btn btn-outline-light btn-social" href="https://github.com/Basamasa"><i class="fab fa-github"></i></a>
-                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-github"></i></a> -->
-                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/enzer-erkin-a22327133/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <h4 class="text-white mb-4">Quick Link</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
-                        <a class="btn btn-link" href="privacy.html">Privacy Policy</a>
-                        <a class="btn btn-link" href="eula.html">Terms of Use</a> 
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">HeartRateHub</a>, All Right Reserved. 
-							
-							<!--/*** Con template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+  <a class="brand" href="/" aria-label="RunDebrief home"><img src="assets/icon.png" alt="" width="40" height="40">RunDebrief</a>
+  <nav aria-label="Main navigation"><a href="#how">How it works</a><a href="#inside">Inside the app</a><a href="#questions">Questions</a></nav>
+  <a class="header-cta" href="#release">Release update <span aria-hidden="true">↗</span></a>
+</header>
+<main id="main">
+  <section class="hero wrap" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> A new chapter for HeartRateHub</p>
+      <h1 id="hero-title">Your run.<br><span>Understood.</span></h1>
+      <p class="intro">You did the intervals.<br>See how your heart rate matched the plan.</p>
+      <p class="hero-detail">Review each effort and recovery against your own BPM targets. Keep recording with Apple Workout.</p>
+      <div class="hero-actions"><a class="button" href="#inside">See it in action <span aria-hidden="true">↓</span></a><span class="platforms">Made for iPhone, iPad<br>& Apple Watch</span></div>
+      <a class="release-note" href="#release">Preview the upcoming RunDebrief release <span aria-hidden="true">↗</span></a>
     </div>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <figure class="hero-visual">
+      <div class="track-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="vertical-note" aria-hidden="true">RECORD. REVIEW. REPEAT.</div>
+      <div class="phone hero-phone"><img src="assets/review.jpg" width="792" height="1721" fetchpriority="high" alt="RunDebrief run review: an example heart-rate chart, target band and interval breakdown."></div>
+      <figcaption><span class="small-cross" aria-hidden="true">+</span> Real app. Example run.</figcaption>
+    </figure>
+  </section>
+  <div class="benefit-strip"><div class="wrap"><span>Keep your recorder</span><span>Your targets, each interval</span><span>Reviews stay on-device</span></div></div>
+  <section class="how wrap section" id="how" aria-labelledby="how-title">
+    <div class="section-heading"><p class="eyebrow">The run is only half the story</p><h2 id="how-title">Make sense of<br>every effort.</h2><p>A whole-run average can hide the details.<br>Give your work and recovery their own review.</p></div>
+    <ol class="steps">
+      <li><span class="step-number">01 / RECORD</span><h3>Run your way.</h3><p>Record with Apple Workout, or follow a timed plan with the included Watch app.</p></li>
+      <li><span class="step-number">02 / REVIEW</span><h3>Bring your targets.</h3><p>Choose a BPM range for each recorded interval, or compare your run with a saved timed plan.</p></li>
+      <li><span class="step-number">03 / UNDERSTAND</span><h3>See the full picture.</h3><p>See time below, within and above target. Missing readings stay visible. Export the details as CSV.</p></li>
+    </ol>
+  </section>
+  <section class="inside" id="inside" aria-labelledby="inside-title">
+    <div class="wrap inside-grid">
+      <div class="inside-copy">
+        <p class="eyebrow">A closer look</p><h2 id="inside-title">Less guessing.<br><span>More clarity.</span></h2>
+        <p class="inside-intro">From the first warm-up to the last recovery. A focused toolkit for runners who train with heart rate.</p>
+        <div class="screen-picker" aria-label="Choose an app screen">
+          <button type="button" data-screen="review" aria-pressed="true" aria-controls="screen-review"><span class="picker-number">01</span><span><strong>Review your run</strong><small>Your target band beside your actual heart rate.</small></span><span class="picker-arrow" aria-hidden="true">↗</span></button>
+          <button type="button" data-screen="intervals" aria-pressed="false" aria-controls="screen-intervals"><span class="picker-number">02</span><span><strong>Look at each interval</strong><small>Different efforts. Different BPM targets.</small></span><span class="picker-arrow" aria-hidden="true">↗</span></button>
+          <button type="button" data-screen="builder" aria-pressed="false" aria-controls="screen-builder"><span class="picker-number">03</span><span><strong>Build your repeats</strong><small>Work, recover, repeat. Set up in a few taps.</small></span><span class="picker-arrow" aria-hidden="true">↗</span></button>
+          <button type="button" data-screen="editor" aria-pressed="false" aria-controls="screen-editor"><span class="picker-number">04</span><span><strong>Make the plan yours</strong><small>Edit the timing and target of any interval.</small></span><span class="picker-arrow" aria-hidden="true">↗</span></button>
+        </div>
+        <p class="data-note">Screens from the upcoming release. Review screens use example data. Available intervals depend on the recording and Health permissions.</p>
+      </div>
+      <div class="screen-stage">
+        <figure class="screen-panel" id="screen-review"><div class="phone"><img src="assets/review.jpg" width="792" height="1721" loading="lazy" alt="Example run review with a heart-rate target band, observed time in range and data coverage."></div><figcaption>01 — The run, in context.</figcaption></figure>
+        <figure class="screen-panel" id="screen-intervals"><div class="phone"><img src="assets/intervals.jpg" width="792" height="1721" loading="lazy" alt="Interval review showing individual BPM targets and time below, within and above target."></div><figcaption>02 — Every interval has a story.</figcaption></figure>
+        <figure class="screen-panel" id="screen-builder"><div class="phone"><img src="assets/builder.jpg" width="792" height="1721" loading="lazy" alt="Repeat builder with work and recovery durations, six repeats, and warm-up and cool-down options."></div><figcaption>03 — Your next session, ready.</figcaption></figure>
+        <figure class="screen-panel" id="screen-editor"><div class="phone"><img src="assets/editor.jpg" width="792" height="1721" loading="lazy" alt="Visual workout editor with editable intervals and heart-rate ranges."></div><figcaption>04 — Fine-tune the details.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+  <section class="principles wrap section" aria-label="Designed around your training">
+    <div class="principle"><span class="line-icon" aria-hidden="true">↗</span><h3>Your wrist.<br>Your workout.</h3><p>Follow interval countdowns and heart-rate targets on Apple Watch. Choose the out-of-target reminders that work for you.</p></div>
+    <div class="principle"><span class="line-icon" aria-hidden="true">↔</span><h3>Small screen.<br>Bigger picture.</h3><p>Plan and review on iPhone or iPad. English, German, Japanese and Simplified Chinese are included in the new release.</p></div>
+    <div class="principle"><span class="line-icon" aria-hidden="true">◎</span><h3>Your health.<br>Stays yours.</h3><p>Reviews are processed on-device. No developer account, ads or third-party analytics. You choose Health access and what to export.</p><a class="text-link" href="privacy.html">How your data is handled <span aria-hidden="true">↗</span></a></div>
+  </section>
+  <section class="questions wrap section" id="questions" aria-labelledby="faq-title">
+    <div><p class="eyebrow">Good questions</p><h2 id="faq-title">Before your<br>next run.</h2></div>
+    <div class="faq-list">
+      <details><summary>I already use Apple Workout. Why RunDebrief?</summary><p>Keep your recording routine. RunDebrief adds a focused review of how each available recorded interval matched the heart-rate target you choose, with time below, within and above target. You can also compare against a saved timed plan and export an interval report.</p></details>
+      <details><summary>Does it import my Apple Workout targets?</summary><p>No. You choose the BPM targets in RunDebrief. Recorded interval boundaries are used when available; otherwise you get a whole-run review. Saved-plan comparison supports timed steps with usable pause timing, not automatic alignment to distance-based plans.</p></details>
+      <details><summary>Do I have to record on an Apple Watch?</summary><p>The included recorder requires Apple Watch. Reviews can use compatible runs and walks saved to Apple Health by other recording apps. The available intervals and heart-rate readings depend on that recording. Plans and templates can be used without Health access.</p></details>
+      <details><summary>What if my heart-rate readings are missing?</summary><p>Missing readings remain visible. Target percentages use the observed time, and data coverage is shown alongside. Unfinished intervals are identified separately. A review is a comparison with your chosen targets, not a medical assessment or fitness score.</p></details>
+      <details><summary>Will I need a subscription?</summary><p>The upcoming RunDebrief release is planned as one paid download with every feature included, without a Pro unlock or required subscription. Final pricing will appear on the App Store when the release is available. The current store listing is the older HeartRateHub version.</p></details>
+      <details><summary>I already have HeartRateHub. Is this the same app?</summary><p>Yes. RunDebrief is the next chapter of HeartRateHub. This website previews the new design and features, which are not yet available in the public release. Follow the existing App Store listing for the update, or email support if you need help with your current version.</p></details>
+    </div>
+  </section>
+  <section class="release wrap" id="release" aria-labelledby="release-title">
+    <div><p class="eyebrow">Coming next</p><h2 id="release-title">A little more insight.<br>A lot more intention.</h2><p>RunDebrief is getting ready for the App Store.<br>One purchase. Every feature. Your next chapter of running.</p></div>
+    <div class="release-actions"><a class="button" href="https://apps.apple.com/app/id6477622582">View the current app <span aria-hidden="true">↗</span></a><p>Opens HeartRateHub, the previous version.<br>The RunDebrief update is not yet live.</p><a class="text-link" href="mailto:anzerarkin@outlook.com?subject=RunDebrief%20support">Contact the developer <span aria-hidden="true">↗</span></a></div>
+  </section>
+</main>
+<footer class="wrap footer"><div><a class="brand" href="/"><img src="assets/icon.png" alt="" width="32" height="32">RunDebrief</a><p>Record. Review. Repeat.</p></div><nav aria-label="Footer navigation"><a href="privacy.html">Privacy</a><a href="eula.html">Terms</a><a href="mailto:anzerarkin@outlook.com">Support</a></nav><div class="footer-fine"><p>© 2026 Enzer Erkin · Formerly HeartRateHub</p><p>Independent app. Not affiliated with Apple.</p><p>Original site template: <a href="https://htmlcodex.com">HTML Codex</a></p></div></footer>
 </body>
-
 </html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://basamasa.github.io/sitemap.xml
